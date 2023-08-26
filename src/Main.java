@@ -2,16 +2,28 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        myLinkedList.append(5);
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("LL before remove():");
+        myLinkedList.printList();
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println("\nRemoved node:");
+        System.out.println(myLinkedList.remove(2).value);
+        System.out.println("LL after remove() in middle:");
+        myLinkedList.printList();
+
+        System.out.println("\nRemoved node:");
+        System.out.println(myLinkedList.remove(0).value);
+        System.out.println("LL after remove() of first node:");
+        myLinkedList.printList();
+
+        System.out.println("\nRemoved node:");
+        System.out.println(myLinkedList.remove(2).value);
+        System.out.println("LL after remove() of last node:");
+        myLinkedList.printList();
     }
 }
