@@ -8,6 +8,16 @@ public class Main {
         myLinkedList.append(4);
         myLinkedList.append(5);
 
+        System.out.println("LL before reverse():");
+        myLinkedList.printList();
+
+        myLinkedList.getHead();
+        myLinkedList.reverse();
+
+        System.out.println("\nLL after reverse():");
+        myLinkedList.printList();
+
+/*
         System.out.println("LL before remove():");
         myLinkedList.printList();
 
@@ -24,6 +34,6 @@ public class Main {
         System.out.println("\nRemoved node:");
         System.out.println(myLinkedList.remove(2).value);
         System.out.println("LL after remove() of last node:");
-        myLinkedList.printList();
+        myLinkedList.printList();*/
     }
 }
