@@ -30,13 +30,14 @@ public class LRUCache<T> {
     public void put(final String key, final T value) {
         Node currentNode = hashmap.get(key);
 
-        if(currentNode != null){
-            hashmap.put(key, currentNode);
+        if (currentNode != null) {
+            currentNode.value = value;
+//            hashmap.put(key, currentNode);
             queue.moveNodeToFront(currentNode);
             return;
         }
 
-        if(size == capacity){
+        if (size == capacity) {
             String rearNodeKey = queue.getRearKey();
             queue.removeNodeFromRear();
             hashmap.remove(rearNodeKey);
@@ -87,7 +88,7 @@ public class LRUCache<T> {
             }
 
             if (rear == node) {
-                rear.prev = node;
+                rear = rear.prev;
                 rear.next = null;
             } else {
                 node.prev.next = node.next;
@@ -96,7 +97,7 @@ public class LRUCache<T> {
 
             node.prev = null;
             node.next = front;
-            front.next = node;
+            front.prev = node;
             front = node;
         }
 

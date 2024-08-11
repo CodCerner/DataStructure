@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class UseCache {
     public static void main(String[] args) throws IOException {
-        LRUCache cache = new LRUCache(3);
+        LRUCache<Integer> cache = new LRUCache(3);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int choice = 1;
@@ -28,7 +28,7 @@ public class UseCache {
                 case 2:
                     System.out.println("Enter Key");
                     key = br.readLine();
-                    System.out.println("Value is: " + cache.get(key).toString());
+                    System.out.println("Value is: " + cache.get(key) + " \n");
                     break;
 
                 default:
