@@ -32,5 +32,25 @@ public class Main {
 
         */
 
+        System.out.println("\nBreadth First Search:");
+        System.out.println( myBST.BFS() );
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            Breadth First Search:
+            [47, 21, 76, 18, 27, 52, 82]
+
+        */
+
+        System.out.println("\nDepth First Search PreOrder:");
+        System.out.println( myBST.DFSPreOrder() );
+
+        System.out.println("\nDepth First Search PostOrder:");
+        System.out.println( myBST.DFSPostOrder() );
+
+        System.out.println("\nDepth First Search InOrder:");
+        System.out.println( myBST.DFSInOrder() );
+
     }
 }
