@@ -33,7 +33,7 @@ public class Main {
         */
 
         System.out.println("\nBreadth First Search:");
-        System.out.println( myBST.BFS() );
+        System.out.println(myBST.BFS());
 
         /*
             EXPECTED OUTPUT:
@@ -44,13 +44,13 @@ public class Main {
         */
 
         System.out.println("\nDepth First Search PreOrder:");
-        System.out.println( myBST.DFSPreOrder() );
+        System.out.println(myBST.DFSPreOrder());
 
         System.out.println("\nDepth First Search PostOrder:");
-        System.out.println( myBST.DFSPostOrder() );
+        System.out.println(myBST.DFSPostOrder());
 
         System.out.println("\nDepth First Search InOrder:");
-        System.out.println( myBST.DFSInOrder() );
+        System.out.println(myBST.DFSInOrder());
 
     }
 }

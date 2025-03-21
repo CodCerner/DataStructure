@@ -171,12 +171,11 @@ public class LinkedList {
 
     }
 
-    public void reverseUsingRecursion(){
+    public void reverseUsingRecursion() {
         head = reverse(head);
     }
 
-    public Node reverse(Node head)
-    {
+    public Node reverse(Node head) {
         if (head == null || head.next == null)
             return head;
 
@@ -191,23 +190,23 @@ public class LinkedList {
         return rest;
     }
 
-    public Node findMiddleNode(){
+    public Node findMiddleNode() {
         Node fast = head;
         Node slow = head;
-        while (fast != null && slow!= null && fast.next != null){
+        while (fast != null && slow != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
         return slow;
     }
 
-    public boolean hasLoop(){
+    public boolean hasLoop() {
         Node fast = head;
         Node slow = head;
-        while(fast != null && slow != null && fast.next != null){
+        while (fast != null && slow != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if(fast == slow){
+            if (fast == slow) {
                 return true;
             }
         }
@@ -215,14 +214,14 @@ public class LinkedList {
     }
 
     public void reverseBetween(int m, int n) {
-        if(head == null) return;
+        if (head == null) return;
         Node dummy = new Node(0);
         dummy.next = head;
         Node prev = dummy;
 
-        int count =0 ;
-        while(count < m){
-            if(prev != null){
+        int count = 0;
+        while (count < m) {
+            if (prev != null) {
                 prev = prev.next;
             }
             count++;
@@ -240,21 +239,21 @@ public class LinkedList {
         head = dummy.next;
     }
 
-    public Node findKthFromEnd(int k){
+    public Node findKthFromEnd(int k) {
         Node fast = head;
         Node slow = head;
         int count = 0;
-        while (count < k){
-            if(slow == null){
+        while (count < k) {
+            if (slow == null) {
                 return null;
             }
             slow = slow.next;
             count++;
         }
 
-        if(slow == null && head != null){
+        if (slow == null && head != null) {
             return head;
-        }else{
+        } else {
             while (slow != null) {
                 fast = fast.next;
                 slow = slow.next;
@@ -264,7 +263,7 @@ public class LinkedList {
 
     }
 
-    public void partitionList(int x){
+    public void partitionList(int x) {
         if (head == null) return;
 
         Node dummy1 = new Node(0);
@@ -291,7 +290,7 @@ public class LinkedList {
     }
 
     public void removeDuplicates() {
-        if(head == null) return;
+        if (head == null) return;
 
         Set<Integer> values = new HashSet<>();
         Node previous = null;

@@ -48,7 +48,7 @@ public class QuickSort {
 
         quickSort(myArray);
 
-        System.out.println( Arrays.toString( myArray ) );
+        System.out.println(Arrays.toString(myArray));
 
         /*
             EXPECTED OUTPUT:
